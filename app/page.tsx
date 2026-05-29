@@ -133,7 +133,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero */}
-      <section className="relative pt-24 pb-20 overflow-hidden">
+      <section className="relative pt-28 pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background pointer-events-none" />
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
@@ -181,7 +181,7 @@ export default function LandingPage() {
                   <span className="text-xs text-muted-foreground">app.pghub.in/dashboard</span>
                 </div>
               </div>
-              <div className="grid grid-cols-4 min-h-[360px]">
+              <div className="grid grid-cols-4 min-h-[420px]">
                 <div className="bg-sidebar col-span-1 p-4 hidden sm:block">
                   <div className="flex items-center gap-2 mb-6">
                     <div className="w-7 h-7 bg-primary rounded-md flex items-center justify-center">
@@ -238,17 +238,17 @@ export default function LandingPage() {
       </section>
 
       {/* Features */}
-      <section id="features" className="py-20 bg-muted/30">
+      <section id="features" className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
             <Badge className="mb-3 bg-primary/10 text-primary border-primary/20">Features</Badge>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">Everything You Need to Run a Modern PG</h2>
             <p className="text-muted-foreground max-w-xl mx-auto text-pretty">A comprehensive suite of tools designed for PG owners, managers, and residents alike.</p>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {FEATURES.map((f, i) => (
               <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
-                className="bg-card border border-border rounded-2xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+                className="bg-card border border-border rounded-2xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                 <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center mb-4", f.bg)}>
                   <f.icon className={cn("w-5 h-5", f.color)} />
                 </div>
@@ -261,7 +261,7 @@ export default function LandingPage() {
       </section>
 
       {/* Benefits */}
-      <section id="benefits" className="py-20">
+      <section id="benefits" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -293,7 +293,7 @@ export default function LandingPage() {
                 { value: "₹12Cr+", label: "Rent collected", color: "text-warning" },
                 { value: "99.9%", label: "Uptime SLA", color: "text-primary" },
               ].map((s) => (
-                <div key={s.label} className="bg-card border border-border rounded-2xl p-6 text-center">
+                <div key={s.label} className="bg-card border border-border rounded-2xl p-8 text-center">
                   <p className={cn("text-3xl font-bold mb-1", s.color)}>{s.value}</p>
                   <p className="text-sm text-muted-foreground">{s.label}</p>
                 </div>
@@ -304,14 +304,14 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20 bg-muted/30">
+      <section id="pricing" className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <Badge className="mb-3 bg-primary/10 text-primary border-primary/20">Pricing</Badge>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">Simple, Transparent Pricing</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">No hidden fees. Pick the plan that fits your PG size.</p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {PRICING.map((p, i) => (
               <motion.div key={p.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className={cn("rounded-2xl p-6 flex flex-col", p.highlight ? "bg-primary text-primary-foreground shadow-xl shadow-primary/20 scale-105" : "bg-card border border-border")}>
@@ -342,7 +342,7 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-20">
+      <section id="testimonials" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
             <Badge className="mb-3 bg-warning/10 text-warning border-warning/20">Testimonials</Badge>
@@ -371,7 +371,7 @@ export default function LandingPage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-20 bg-muted/30">
+      <section id="faq" className="py-24 bg-muted/30">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
             <Badge className="mb-3 bg-primary/10 text-primary border-primary/20">FAQ</Badge>
@@ -397,7 +397,7 @@ export default function LandingPage() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -455,7 +455,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-16 bg-primary">
+      <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-balance">Ready to Modernize Your PG?</h2>
@@ -469,7 +469,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border">
+      <footer className="py-16 border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
             <div className="col-span-2 md:col-span-1">
